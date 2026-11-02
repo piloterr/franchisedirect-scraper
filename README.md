@@ -69,7 +69,7 @@ response = requests.get(
     params={
         "query": "https://www.franchisedirect.com/coffee-franchises/coffeenow",
     },
-    timeout=60,
+    timeout=120,
 )
 response.raise_for_status()
 data = response.json()
@@ -196,7 +196,7 @@ response = requests.get(
     params={
         "query": "coffee",
     },
-    timeout=60,
+    timeout=120,
 )
 response.raise_for_status()
 data = response.json()

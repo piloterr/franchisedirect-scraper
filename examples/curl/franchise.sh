@@ -3,6 +3,6 @@
 # Usage: PILOTERR_API_KEY=your-key ./franchise.sh
 set -euo pipefail
 
-curl -sS -G "https://api.piloterr.com/v2/franchisedirect/franchise" \
+curl -sS --fail-with-body -G "https://api.piloterr.com/v2/franchisedirect/franchise" \
   -H "x-api-key: ${PILOTERR_API_KEY}" \
   --data-urlencode query=https://www.franchisedirect.com/coffee-franchises/coffeenow
